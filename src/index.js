@@ -1,11 +1,38 @@
 var m = require("mithril")
+var MyComponent = require("./components/mycomponent")
 
-var MyComponent = {
-        view: function() {
-            return m("div",[
-                m("h1","Hallo Ugi, INI MITHRIL JSX"),
-            ])
-        }
+    
+var Test = {
+    view: function() {
+        return <MyComponent />
     }
-        
-m.render(document.body, <MyComponent />)
+}
+
+var Title = {
+    view:function() {
+        return m("title","Latihan Methril Ke 1");
+    }
+}
+
+var About = {
+    view:function(){
+        return m("h2","ini ABout")
+    }
+}
+
+var Home = {
+    view:function() {
+        return m("h1","Ini Home")
+    }
+}
+
+
+m.render(document.head, <Title/>)
+var root = document.body
+// m.render(document.body, <Test/>) 
+
+m.route(root, "/", {
+    "/": Test,
+    "/about": About,
+    "/home": Home,
+})
