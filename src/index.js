@@ -10,19 +10,23 @@ var Test = {
 
 var Title = {
     view:function() {
-        return m("title","Latihan Methril Ke 1");
+        return m("title","Latihan Methril Ke 1")
     }
 }
 
 var About = {
     view:function(){
         return m("h2","ini ABout")
+        // m("a", {href: "#!/"}, "Awal"),
+        // m("a", {href: "#!/about"}, "About")
     }
 }
 
 var Home = {
     view:function() {
         return m("h1","Ini Home")
+        // m("a", {href: "#!/"}, "Awal"),
+        // m("a", {href: "#!/home"}, "Home")
     }
 }
 
